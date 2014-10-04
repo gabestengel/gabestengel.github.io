@@ -1,0 +1,37 @@
+
+<!--Program: Gabe's Quiz
+    Author:	Gabe Stengel
+    Date:	Friday, September 26, 2014
+    Notes:	I spent hours trying to get JSON to work, but when I finnally got it I blew through the rest of it
+            I had to do some research to figure out how to do the piechart, as well as referencing w3school constantly
+            I also used a css normalizing file to try to make sure it looked the same on all browsers
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabe Stengel's Quiz</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css"> 
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <script src = "jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="quiz.js"></script> 
+    <script type = "text/javascript" src="makework.js"></script>
+      
+  </head>
+  <body>
+    <header>
+        <h1 id=demo> Welcome to my Quiz!</h1>
+    </header>
+      <p1 id=qslot>Hi! What's your name? <input type="text" id="test" value="Name"></p1>
+      <form id = frm>
+      </form>
+    <footer>
+        <button id=forName onclick = enterName()>Continue</button>
+    </footer>
+      <br>
+      
+  </body>
+</html>

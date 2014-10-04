@@ -1,8 +1,7 @@
 var text;
 $(document).ready(function(){
-    text = $.getJSON("quiz.json", function() {
-    console.log( "success in getting json" );
-});
+    $.getJSON("quiz.JSON", function(callback) {
+    text = callback );
 });
 
 var numQ = 1;

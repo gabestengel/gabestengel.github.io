@@ -1,0 +1,26 @@
+/*************************************
+EVERYTHING
+*************************************/
+* {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    background-image:url("img/background.jpg");
+}
+
+
+
+
+body {
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+header {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0% 5%;
+}

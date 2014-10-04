@@ -1,8 +1,8 @@
 var text;
 $(document).ready(function(){
     $.getJSON("quiz.JSON", function(callback) {
-    text = callback );
-});
+    text = callback });
+    });
 
 var numQ = 1;
 var rights = 0;

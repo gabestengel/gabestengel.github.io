@@ -1,4 +1,8 @@
+var text;
 $(document).ready(function(){
+    text = $.getJSON("quiz.json", function() {
+    console.log( "success in getting json" );
+});
 });
 
 var numQ = 1;

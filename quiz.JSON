@@ -1,7 +1,4 @@
-
-//JSON File
-
-var text = {"Qs": [
+{"Qs": [
         {"prompt": "SAMPLE QUESTION", "answers": [ 
                 {"choice": "ANSWER 1 HERE", "correct": 0},
                 {"choice": "ANSWER 2 HERE", "correct":0},
@@ -75,4 +72,4 @@ var text = {"Qs": [
                 {"choice": "11", "correct":1}
         ]}
     ]
-};
+}

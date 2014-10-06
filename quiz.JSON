@@ -1,5 +1,5 @@
 {"Qs": [
-        {"prompt": "SAMPLE QUESTION", "answers": [ 
+        {"prompt": "GABES  QUIZ (LOADED WITH JSON)", "answers": [ 
                 {"choice": "ANSWER 1 HERE", "correct": 0},
                 {"choice": "ANSWER 2 HERE", "correct":0},
                 {"choice": "AND SO ON", "correct":1}
@@ -11,7 +11,7 @@
                 {"choice": "4 hours", "correct":0}
         ]},
         {"prompt": "If I drop a ball from 20 meters up, how long does it take to hit the ground?", "answers": [ 
-                {"choice": "Wait I still want to know how many chickens there were", "correct": 0},
+                {"choice": "I got a C+ in highschool physics", "correct": 1},
                 {"choice": "2 seconds", "correct":1},
                 {"choice": "Who says it hits the ground?", "correct":0},
                 {"choice": "1.75 seconds", "correct":0}

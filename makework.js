@@ -1,8 +1,13 @@
 var text;
 $(document).ready(function(){
-    $.getJSON("quiz.JSON", function(callback) {
-    text = callback });
+    $.ajaxSetup({
+        async: false
     });
+    $.getJSON("quiz.JSON", function(callback) {
+        text = callback 
+    });
+    $("h1").text(text.Qs[0].prompt );
+});
 
 var numQ = 1;
 var rights = 0;

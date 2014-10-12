@@ -7,8 +7,10 @@ $(document).ready(function(){
         text = callback 
     });
     if (userName === "") {
-        alert("You must log in first!");
-        location.href = 'login.html';
+        if (location.href === 'index.html'){
+            alert("You must log in first!");
+            location.href = 'login.html';
+        }
     }
     $("#words").hide();
 });

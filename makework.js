@@ -6,12 +6,12 @@ $(document).ready(function(){
     $.getJSON("quiz.JSON", function(callback) {
         text = callback 
     });
-    if (userName === "") {
+    /*if (userName === "") {
         if (location.href == 'index.html'){
             alert("You must log in first!");
             location.href = 'login.html';
         }
-    }
+    } */
     $("#words").hide();
 });
 

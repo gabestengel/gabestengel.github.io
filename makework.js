@@ -7,7 +7,7 @@ $(document).ready(function(){
         text = callback 
     });
     if (userName === "") {
-        if (location.href === 'index.html'){
+        if (location.href == 'index.html'){
             alert("You must log in first!");
             location.href = 'login.html';
         }

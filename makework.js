@@ -6,9 +6,15 @@ $(document).ready(function(){
     $.getJSON("quiz.JSON", function(callback) {
         text = callback 
     });
-    $("h1").text(text.Qs[0].prompt );
+    if (userName === "") {
+        alert("You must log in first!");
+        location.href = 'login.html';
+    }
+    $("#words").hide();
 });
 
+var userName = "";
+var password;
 var numQ = 1;
 var rights = 0;
 var wrongs = 0;
@@ -160,7 +166,44 @@ function finish(){
     $("p1").append(yo);
 }
 
-function seeWhich(){
-
+//******************
+//Called when users try to log in
+function logIn(){
+    userName = $("#userName").val();
+    password = $("#password").val();
+    if ($("#userName").val() != ""){
+        if ($("#password").val() === ""){
+            alert("NO PASSWORD ENTERED");
+        }
+        else {
+            $('#frm')[0].reset();
+            if (localStorage[userName]) {
+                if (password === localStorage[userName]){
+                    location.href = 'index.html';
+                }
+                else {
+                    alert("USERNAME AND PASSWORD DO NOT MATCH");
+                }
+            }   
+            else {
+                signUp();
+            }   
+        }
+    }
+    else {
+        alert("MUST ENTER A USERNAME");
+    }
 }
+
+//******************
+//Called when users try signup
+function signUp(){
+    $("#title").text("Sign Up!");
+    $("#words").text("That username does not exist, would you like to create a new account with the password "+ password + " ?");
+    $("#words").show(1000);
+    $("#frm").fadeOut();
+    localStorage[userName] = password;
+}
+
           
+        

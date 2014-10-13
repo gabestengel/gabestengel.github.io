@@ -219,6 +219,7 @@ function signUp(){
 
 function signupConfirmed(){
     changeToQuiz();
+    $("#signnup").remove();
 }
 
           
@@ -239,7 +240,8 @@ function changeToQuiz(){
     $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
     $("#words").remove();
     $("#frm1").remove();
-    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
+    //$('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
     $("#loggin").remove();
+    
 }
         

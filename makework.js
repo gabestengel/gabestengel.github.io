@@ -26,12 +26,19 @@ var array = [];
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
 function enterName() { 
-    $("#forName").remove();
-    nameOf = $("#test").val();
-    for (var i = 0; i < text.Qs[numQ].answers.length; i++){
-       array.push(-1);     
+    if (userName === "") {
+        alert("YOU ARE NOT LOGGED IN! Please log in!");
+        changeToLogin();
     }
-    nextQuestion();
+    else {
+        alert("you are logged in as " + userName);
+        $("#forName").remove();
+        nameOf = $("#test").val();
+        for (var i = 0; i < text.Qs[numQ].answers.length; i++){
+           array.push(-1);     
+        }
+        nextQuestion();
+    }
 }
     
 //*****************    
@@ -181,7 +188,7 @@ function logIn(){
             $('#frm')[0].reset();
             if (localStorage[userName]) {
                 if (password === localStorage[userName]){
-                    location.href = 'index.html';
+                    changeToQuiz();
                 }
                 else {
                     alert("USERNAME AND PASSWORD DO NOT MATCH");
@@ -204,8 +211,35 @@ function signUp(){
     $("#words").text("That username does not exist, would you like to create a new account with the password "+ password + " ?");
     $("#words").show(1000);
     $("#frm").fadeOut();
+    $("#loggin").remove();
+    var c = $('<button id="signnup" onclick = signupConfirmed()>Sign Up</button>');
+    c.appendTo($("footer"));
     localStorage[userName] = password;
 }
 
+function signupConfirmed(){
+    changeToQuiz();
+}
+
           
+function changeToLogin(){
+    $("#title").text("Log in");
+    $("#qslot").remove();
+    var c = $('<p1 id = "words"></p1><form id = "frm1"> Username: <input type="text" id ="userName" value =""> <br id = "cush1"> <br id = "cush2"> Password: <input type="text" id = "password" value=""></form>');
+    c.appendTo($("footer"));
+    $("#forName").remove();
+    var e = $('<button id="loggin" onclick = logIn()>Log In</button>');
+    e.appendTo($("footer"));
+}
+
+function changeToQuiz(){
+    $("#title").text("Welcome to my quiz!");
+    var c = $('<p1 id="qslot">Hi! What is your name? <input type="text" id="test" value="Name"></p1>');
+    $("#afterThis").after(c);
+    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer");
+    $("#words").remove();
+    $("#frm1").remove();
+    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
+    $("#loggin").remove();
+}
         

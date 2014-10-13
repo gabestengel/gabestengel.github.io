@@ -210,7 +210,7 @@ function signUp(){
     $("#title").text("Sign Up!");
     $("#words").text("That username does not exist, would you like to create a new account with the password "+ password + " ?");
     $("#words").show(1000);
-    $("#frm").fadeOut();
+    $("#frm1").fadeOut();
     $("#loggin").remove();
     var c = $('<button id="signnup" onclick = signupConfirmed()>Sign Up</button>');
     c.appendTo($("footer"));
@@ -233,6 +233,13 @@ function changeToLogin(){
 }
 
 function changeToQuiz(){
-
+    $("#title").text("Welcome to my quiz!");
+    var c = $('<p1 id="qslot">Hi! What is your name? <input type="text" id="test" value="Name"></p1>');
+    $("#afterThis").after(c);
+    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
+    $("#words").remove();
+    $("#frm1").remove();
+    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
+    $("#loggin").remove();
 }
         

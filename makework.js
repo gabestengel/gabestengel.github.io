@@ -233,13 +233,6 @@ function changeToLogin(){
 }
 
 function changeToQuiz(){
-    $("#title").text("Welcome to my quiz!");
-    var c = $('<p1 id="qslot">Hi! What is your name? <input type="text" id="test" value="Name"></p1>');
-    $("#afterThis").after(c);
-    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer");
-    $("#words").remove();
-    $("#frm1").remove();
-    $('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
-    $("#loggin").remove();
+
 }
         

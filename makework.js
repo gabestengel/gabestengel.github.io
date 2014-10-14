@@ -22,6 +22,7 @@ var rights = 0;
 var wrongs = 0;
 var nameOf;
 var array = [];
+var score;
 
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
@@ -171,7 +172,7 @@ function finish(){
         last += Math.PI*2*(data[i]/tot);
         }
     },500); 
-    var yo = $('<button id=res onclick = seeWhich()>See answers!</button>');
+    var yo = $('<br><br><button id=res onclick = seeScores()>Compare Scores!</button>');
     $("p1").append(yo);
 }
 
@@ -245,3 +246,28 @@ function changeToQuiz(){
     
 }
         
+function seeScores(){
+    /*
+    var numScores;
+    score = rights/wrongs;
+    numScores = JSON.parse(numScores);
+    numScores.empty
+     if (localSorage["numScores"]) {
+        numScores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] + ");
+        var c = '{ "scores" : [' +
+'{ "user":"'+userName+'" , "score":"'+score+'" }' +
+' ]}';
+        var d = JSON.parse(c);
+        localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] = d.concat(numScores);
+    }
+    else {
+        numScores = '{ "scores" : [' +
+'{ "user":"'+userName+'" , "score":"'+score+'" }' +
+' ]}';
+    localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] = numScores;                         
+    }
+    
+    var scores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
+    $("h1").text(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
+    */
+}

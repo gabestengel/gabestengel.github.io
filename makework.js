@@ -1,4 +1,5 @@
 var text;
+var users = {};
 $(document).ready(function(){
     $.ajaxSetup({
         async: false
@@ -13,6 +14,9 @@ $(document).ready(function(){
         }
     } */
     $("#words").hide();
+    if (localStorage.getItem("users") != null && localStorage.getItem("users")!=undefined){
+                users=$.parseJSON(localStorage.getItem("users"));//get users
+        }
 });
 
 var userName = "";

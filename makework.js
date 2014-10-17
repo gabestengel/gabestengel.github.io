@@ -223,7 +223,7 @@ function signUp(){
     c.appendTo($("footer"));
     users[userName]=password;
     localStorage.setItem("users", JSON.stringify(users));
-    login(form);
+    
 }
 
 function signupConfirmed(){

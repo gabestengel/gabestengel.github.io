@@ -13,9 +13,6 @@ $(document).ready(function(){
         }
     } */
     $("#words").hide();
-     if (localStorage.getItem("users") != null && localStorage.getItem("users")!=undefined){
-                users=$.parseJSON(localStorage.getItem("users"));//get users
-        }
 });
 
 var userName = "";
@@ -26,7 +23,6 @@ var wrongs = 0;
 var nameOf;
 var array = [];
 var score;
-var users = {};
 
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
@@ -273,5 +269,5 @@ function seeScores(){
     
     var scores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
     $("h1").text(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
-    */
+    
 }

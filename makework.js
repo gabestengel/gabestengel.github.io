@@ -269,5 +269,5 @@ function seeScores(){
     
     var scores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
     $("h1").text(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
-    
+    */
 }

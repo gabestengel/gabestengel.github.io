@@ -1,6 +1,4 @@
 var text;
-var users = {};
-
 $(document).ready(function(){
     $.ajaxSetup({
         async: false
@@ -15,9 +13,9 @@ $(document).ready(function(){
         }
     } */
     $("#words").hide();
-    if (localStorage.getItem("users") != null && localStorage.getItem("users")!=undefined){
-            users=$.parseJSON(localStorage.getItem("users"));//get users
-    }
+     if (localStorage.getItem("users") != null && localStorage.getItem("users")!=undefined){
+                users=$.parseJSON(localStorage.getItem("users"));//get users
+        }
 });
 
 var userName = "";
@@ -28,7 +26,7 @@ var wrongs = 0;
 var nameOf;
 var array = [];
 var score;
-
+var users = {};
 
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
@@ -193,8 +191,8 @@ function logIn(){
         }
         else {
             $('#frm')[0].reset();
-            if (userName in users) {
-                if (users[userName] === password){{
+            if (localStorage[userName]) {
+                if (password === localStorage[userName]){
                     changeToQuiz();
                 }
                 else {
@@ -221,9 +219,7 @@ function signUp(){
     $("#loggin").remove();
     var c = $('<button id="signnup" onclick = signupConfirmed()>Sign Up</button>');
     c.appendTo($("footer"));
-    users[userName]=password;
-    localStorage.setItem("users", JSON.stringify(users));
-    
+    localStorage[userName] = password;
 }
 
 function signupConfirmed(){

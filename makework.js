@@ -191,8 +191,8 @@ function logIn(){
         }
         else {
             $('#frm')[0].reset();
-            if (localStorage[userName]) {
-                if (password === localStorage[userName]){
+            if (userName in users) {
+                if (users[userName] === password){
                     changeToQuiz();
                 }
                 else {
@@ -219,7 +219,9 @@ function signUp(){
     $("#loggin").remove();
     var c = $('<button id="signnup" onclick = signupConfirmed()>Sign Up</button>');
     c.appendTo($("footer"));
-    localStorage[userName] = password;
+    users[userName]=password;
+    localStorage.setItem("users", JSON.stringify(users));
+       
 }
 
 function signupConfirmed(){

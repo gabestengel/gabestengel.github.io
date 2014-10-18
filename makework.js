@@ -181,8 +181,11 @@ function finish(){
         last += Math.PI*2*(data[i]/tot);
         }
     },500); 
-    var yo = $('<br><br><button id=res onclick = seeScores()>Compare Scores!</button>');
+    calcScores();
+    var yo = $('<p1 id="scor"><p1>');
     $("p1").append(yo);
+    $("#scor").text("#1 " + scores[0][1] + " " + scores[0][0]);
+   
 }
 
 //******************
@@ -257,12 +260,12 @@ function changeToQuiz(){
     
 }
         
-function seeScores(){
+function calcScores(){
     if (scores!=null && scores!= undefined && scores.length>0){
         
     }
     else {
-         scores.push([(rights(10))-(wrongs(5)), userName]);
+         scores.push([rights, userName]);
     }
     localStorage.setItem("scores", JSON.stringify(scores));
 }

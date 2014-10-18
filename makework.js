@@ -22,7 +22,7 @@ $(document).ready(function(){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
     scores.push([1, "gabe"]);
-    localStorage.setItem("scores", JSON.stringify(scores));
+   
 });
 
 var userName = "";
@@ -38,6 +38,7 @@ var array = [];
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
 function enterName() { 
+     localStorage.setItem("scores", JSON.stringify(scores));
     if (userName === "") {
         alert("YOU ARE NOT LOGGED IN! Please log in!");
         changeToLogin();

@@ -21,6 +21,7 @@ $(document).ready(function(){
     if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
+    localStorage.setItem("scores", JSON.stringify(scores));
 });
 
 var userName = "";

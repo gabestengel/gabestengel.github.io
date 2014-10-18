@@ -21,6 +21,7 @@ $(document).ready(function(){
     if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
+    scores.add([1, gabe]);
     localStorage.setItem("scores", JSON.stringify(scores));
 });
 
@@ -266,7 +267,7 @@ function calcScores(){
         
     }
     else {
-         scores.push([rights, userName]);
+        scores.add([rights, userName]);
     }
     localStorage.setItem("scores", JSON.stringify(scores));
 }

@@ -21,7 +21,7 @@ $(document).ready(function(){
     if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
-    scores.push([1, gabe]);
+    scores.push([1, "gabe"]);
     localStorage.setItem("scores", JSON.stringify(scores));
 });
 

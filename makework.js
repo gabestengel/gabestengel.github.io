@@ -1,5 +1,6 @@
 var text;
 var users = {};
+var scores = {};
 $(document).ready(function(){
     $.ajaxSetup({
         async: false
@@ -15,8 +16,11 @@ $(document).ready(function(){
     } */
     $("#words").hide();
     if (localStorage.getItem("users") != null && localStorage.getItem("users")!=undefined){
-                users=$.parseJSON(localStorage.getItem("users"));//get users
-        }
+        users=$.parseJSON(localStorage.getItem("users"));//get users
+    }
+    if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
+        scores=$.parseJSON(localStorage.getItem("scores"));//get scores
+    }   
 });
 
 var userName = "";
@@ -26,7 +30,7 @@ var rights = 0;
 var wrongs = 0;
 var nameOf;
 var array = [];
-var score;
+
 
 
 //****************    
@@ -254,27 +258,11 @@ function changeToQuiz(){
 }
         
 function seeScores(){
-    /*
-    var numScores;
-    score = rights/wrongs;
-    numScores = JSON.parse(numScores);
-    numScores.empty
-     if (localSorage["numScores"]) {
-        numScores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] + ");
-        var c = '{ "scores" : [' +
-'{ "user":"'+userName+'" , "score":"'+score+'" }' +
-' ]}';
-        var d = JSON.parse(c);
-        localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] = d.concat(numScores);
+    if (scores!=null && scores!= undefined && scores.length>0){
+        
     }
     else {
-        numScores = '{ "scores" : [' +
-'{ "user":"'+userName+'" , "score":"'+score+'" }' +
-' ]}';
-    localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"] = numScores;                         
+         scores.push([(rights(10))-(wrongs(5)), userName]);
     }
-    
-    var scores = JSON.parse(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
-    $("h1").text(localStorage["numScoresIhopeSomeoneDosntMakeThisTheirUSerName"]);
-    */
+    localStorage.setItem("scores", JSON.stringify(scores));
 }

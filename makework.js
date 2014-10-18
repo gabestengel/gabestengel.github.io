@@ -28,6 +28,7 @@ var nameOf;
 var array = [];
 var score;
 
+
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
 function enterName() { 
@@ -49,7 +50,7 @@ function enterName() {
 //*****************    
 //Responsible for displaying, checking, and animating each individual question    
 function nextQuestion(){
-    $("#qslot").text("Hi "+ nameOf + "! " + text.Qs[numQ].prompt);
+    $("#qslot").text("Hi "+ userName + "! " + text.Qs[numQ].prompt);
     $("h1").text("Question " + numQ.toString());   
     $(".quiz").remove();
     showQuestions();

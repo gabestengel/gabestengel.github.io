@@ -1,5 +1,5 @@
 {"Qs": [
-        {"prompt": "GABES  QUIZ (LOADED WITH JSON)", "answers": [ 
+        {"prompt": "GABES  QUIZ (THIS TITLE WAS LOADED WITH JSON)", "answers": [ 
                 {"choice": "ANSWER 1 HERE", "correct": 0},
                 {"choice": "ANSWER 2 HERE", "correct":0},
                 {"choice": "AND SO ON", "correct":1}

@@ -6,8 +6,10 @@ $(document).ready(function(){
         async: false
     });
     $.getJSON("quiz.JSON", function(callback) {
-        text = callback 
+        text = callback; 
     });
+    
+    $("title").text(text.Qs[0].prompt);
     /*if (userName === "") {
         if (location.href == 'index.html'){
             alert("You must log in first!");

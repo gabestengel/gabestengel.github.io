@@ -45,6 +45,7 @@ function enterName() {
         changeToLogin();
     }
     else {
+        
         alert("you are logged in as " + userName);
         $("#forName").remove();
         nameOf = $("#test").val();

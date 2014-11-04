@@ -9,7 +9,7 @@ $(document).ready(function(){
         text = callback; 
     });
     
-    $("title").text(text.Qs[0].prompt);
+    $("#title").text(text.Qs[0].prompt);
     /*if (userName === "") {
         if (location.href == 'index.html'){
             alert("You must log in first!");

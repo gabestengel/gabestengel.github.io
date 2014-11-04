@@ -21,7 +21,7 @@ $(document).ready(function(){
     if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
-    scores["scrub"]=122;
+ 
    
 });
 
@@ -37,8 +37,7 @@ var array = [];
 
 //****************    
 //Hides the countinue button and sets off the recursive cycles of nextQuestion()    
-function enterName() { 
-     localStorage.setItem("scores", JSON.stringify(scores));
+function enterName() {
     if (userName === "") {
         alert("YOU ARE NOT LOGGED IN! Please log in!");
         changeToLogin();
@@ -265,10 +264,10 @@ function changeToQuiz(){
         
 function calcScores(){
     if (scores!=null && scores!= undefined && scores.length>0){
-        
+        scores[userName]=rights*10-wrongs*5;
     }
     else {
-        scores.add([rights, userName]);
+        scores[userName]=rights*10-wrongs*5;
     }
     localStorage.setItem("scores", JSON.stringify(scores));
 }

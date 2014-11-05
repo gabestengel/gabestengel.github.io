@@ -3,7 +3,7 @@ var users = {};
 var scores = {};
 $(document).ready(function(){
     $.ajaxSetup({
-        async: true
+        async: false
     });
     $.getJSON("quiz.JSON", function(callback) {
         text = callback; 

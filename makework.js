@@ -246,7 +246,7 @@ function signupConfirmed(){
 function changeToLogin(){
     $("#title").text("Log in");
     $("#qslot").remove();
-    var c = $('<p1 id = "words"></p1><form id = "frm1"> Username: <input type="text" id ="userName" value =""> <br id = "cush1"> <br id = "cush2"> Password: <input type="text" id = "password" value=""></form>');
+    var c = $('<p1 id = "words"></p1><form id = "frm1"> Username: <input type="text" id ="userName" value =""> <br id = "cush1"> <br id = "cush2"> Password: <input type="password" id = "password" value=""></form>');
     c.appendTo($("footer"));
     $("#forName").remove();
     var e = $('<button id="loggin" onclick = logIn()>Log In</button>');

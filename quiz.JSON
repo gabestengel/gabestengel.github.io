@@ -6,7 +6,7 @@
         ]},
         {"prompt": "How long did figuring out JSON take me?", "answers": [ 
                 {"choice": "10 minutes", "correct": 0},
-                {"choice": "1 hour", "correct":0},
+                {"choice": "1 hour", "correct":1},
                 {"choice": "2 hours", "correct":1},
                 {"choice": "4 hours", "correct":0}
         ]},

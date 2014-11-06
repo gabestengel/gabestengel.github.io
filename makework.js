@@ -153,6 +153,7 @@ function showQuestions(){
         }
     }         
     $("form").show(1000);
+    picSelect("form","eggs");
 }
 
 //******************
@@ -263,6 +264,23 @@ function changeToQuiz(){
     //$('<button id="forName" onclick = enterName()>Continue</button>').appendTo($("footer"));
     $("#loggin").remove();
     
+}
+
+function picSelect(element, ref){
+    var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $.getJSON( flickerAPI, {
+        tags: ref,
+        tagmode: "any",
+        format: "json"
+    })
+    .done(function( data ) {
+        $.each( data.items, function( i, item ) {
+            $( "<img>" ).attr( "src", item.media.m ).appendTo(element);
+            if ( i === 0 ) {
+            return false;
+            }
+        });
+    });
 }
         
 function calcScores(){

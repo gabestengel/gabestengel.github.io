@@ -23,8 +23,6 @@ $(document).ready(function(){
     if (localStorage.getItem("scores") != null && localStorage.getItem("scores")!=undefined){
         scores=$.parseJSON(localStorage.getItem("scores"));//get scores
     }   
- 
-   
 });
 
 var userName = "";
@@ -164,6 +162,7 @@ function finish(){
     $("#bck").remove();
     $("h1").text("QUIZ OVERRRR");
     $("#countinue").remove();
+    $( "img" ).remove();
     var c = $('<canvas id="canvas" width="400" height="300">');
     c.appendTo($("footer"));
     var myColor = ["#ECD078","#D95B43","#C02942","#542437","#53777A"];
@@ -189,9 +188,7 @@ function finish(){
         }
     },500); 
     calcScores();
-    var yo = $('<p1 id="scor"><p1>');
-    $("p1").append(yo);
-    $("#scor").text("#1 " + scores[0][1] + " " + scores[0][0]);
+    
    
 }
 
@@ -292,4 +289,5 @@ function calcScores(){
         scores[userName]=rights*10-wrongs*5;
     }
     localStorage.setItem("scores", JSON.stringify(scores));
+   
 }

@@ -9,7 +9,7 @@
                 {"choice": "1 hour", "correct":1},
                 {"choice": "2 hours", "correct":1},
                 {"choice": "4 hours", "correct":0}
-        ]},
+        ], "tag": "JSON"},
         {"prompt": "If I drop a ball from 20 meters up, how long does it take to hit the ground?", "answers": [ 
                 {"choice": "I got a C+ in highschool physics", "correct": 1},
                 {"choice": "2 seconds", "correct":1},

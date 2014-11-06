@@ -275,9 +275,9 @@ function picSelect(element, ref){
         format: "json"
     })
     .done(function( data ) {
-        $.each( data.items, function( i, item ) {
-            $( "<img>" ).attr( "src", item.media.m ).appendTo(element);
-            if ( i === 0 ) {
+        $.each( data.items, function( go, k ) {
+            $( "<img>" ).attr( "src", k.media.m ).appendTo(element);
+            if ( go === 0 ) {
             return false;
             }
         });

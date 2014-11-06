@@ -154,7 +154,7 @@ function showQuestions(){
         }
     }         
     $("form").show(1000);
-    picSelect("form","eggs");
+    picSelect("form",text.Qs[numQ].tag);
 }
 
 //******************

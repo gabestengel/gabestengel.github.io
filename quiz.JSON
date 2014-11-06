@@ -4,12 +4,12 @@
                 {"choice": "ANSWER 2 HERE", "correct":0},
                 {"choice": "AND SO ON", "correct":1}
         ], "tag": "JSON"},
-        {"prompt": "How long did figuring out JSON take me?", "tag": "JSON", "answers": [ 
+        {"prompt": "How long did figuring out JSON take me?", "answers": [ 
                 {"choice": "10 minutes", "correct": 0},
                 {"choice": "1 hour", "correct":1},
                 {"choice": "2 hours", "correct":1},
                 {"choice": "4 hours", "correct":0}
-        ]},
+        ], "tag": "JSON"},
         {"prompt": "If I drop a ball from 20 meters up, how long does it take to hit the ground?", "answers": [ 
                 {"choice": "I got a C+ in highschool physics", "correct": 1},
                 {"choice": "2 seconds", "correct":1},
@@ -70,6 +70,6 @@
         {"prompt": "What question number is this?", "answers": [ 
                 {"choice": "10", "correct": 0},
                 {"choice": "11", "correct":1}
-        ], "tag": "11"},
+        ], "tag": "11"}
     ]
 }

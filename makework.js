@@ -141,6 +141,7 @@ function checkQuestions(){
 function showQuestions(){
     var i;
     $("form").hide();
+    $( "<img>" ).remove();
     for (i = 0; i < text.Qs[numQ].answers.length; i++){
         if (i == array[numQ]) {
             var newQ = $('<br class = quiz><br class = quiz><input type="radio" name = "q" class = quiz id = answer'+i+' checked><p2 class = quiz> ' +         text.Qs[numQ].answers[i].choice + '</p2><br class = quiz>');

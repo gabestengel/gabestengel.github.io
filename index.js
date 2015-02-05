@@ -13,8 +13,15 @@ QUnit.test( "exist 0, 99, 3", function(assert) {
   assert.deepEqual( triangleExists(0,99,3), true );
 });
 QUnit.test( "exist -1,2,3", function(assert) {
-  assert.deepEqual( triangleExists(-1,2,3), true );
+  assert.deepEqual( triangleExists(-1,2,3), false );
 });
+QUnit.test("acute equalateral", function(assert){
+    assert.equal(triangleType(3,3,3), "acute");
+});
+QUnit.test("right triangle 3,4,5", function(assert){
+    assert.equal(triangleType(3,4 5), "right");
+});
+
 
 function triangleExists(side1,side2,side3){
     var sides= [side1,side2,side3];

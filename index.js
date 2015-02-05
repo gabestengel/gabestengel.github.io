@@ -1,9 +1,5 @@
-$(document).ready(function(){
-    
-    startTests();
-});
 
-function startTests(){
+
 QUnit.test( "1", function(assert) {
   assert.deepEqual( triangleExists(1,2,3), true );
 });
@@ -19,7 +15,6 @@ QUnit.test( "4", function(assert) {
 QUnit.test( "5", function(assert) {
   assert.deepEqual( triangleExists(-1,2,3), true );
 });
-}
 
 function triangleExists(side1,side2,side3){
     var sides= [side1,side2,side3];

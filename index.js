@@ -26,7 +26,7 @@ QUnit.test("right triangle 3,4,5", function(assert){
 function triangleExists(side1,side2,side3){
     var sides= [side1,side2,side3];
     sides.sort();
-    if(sides[2]+sides[1]>sides[0]){
+    if(sides[0]+sides[1]>sides[2]){
         return true;
     }
     return false;

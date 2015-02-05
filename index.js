@@ -1,4 +1,8 @@
-
+$(document).ready(function(){
+    
+    startTests();
+});
+function startTests(){
 QUnit.test( "hello test", function(assert) {
   assert.ok( triangleExists(1,2,3), true );
 });
@@ -14,6 +18,7 @@ QUnit.test( "hello test", function(assert) {
 QUnit.test( "hello test", function(assert) {
   assert.ok( triangleExists(-1,2,3), true );
 });
+}
 
 function triangleExists(side1,side2,side3){
     var sides= [side1,side2,side3];

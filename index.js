@@ -1,33 +1,27 @@
+QUnit.test( "hello test", function( assert ) {
+  assert.ok( 1 == "1", "Passed!" );
+});
 $(document).ready(function(){
     
     startTests();
 });
 
 function startTests(){
-    //triangle exists
-    QUnit.test("triangle exists (3,4,5)", function(assert){
-        assert.equal(triangleExists(3,4,5), true);
-    });
-    QUnit.test("triangle exists (3,3,5)", function(assert){
-        assert.equal(triangleExists(3,3,5), true);
-    });
-    QUnit.test("triangle exists (0,4,5)", function(assert){
-        assert.equal(triangleExists(0,4,5), false);
-    });
-    QUnit.test("triangle exists (3,3,3)", function(assert){
-        assert.equal(triangleExists(3,4,5), true);
-    });
-    
-    //triangle type
-    QUnit.test("triangle type (3,3,3)", function(assert){
-        assert.equal(triangleType(3,3,3), "acute");
-    });
-    QUnit.test("triangle type (3,4,5)", function(assert){
-        assert.equal(triangleType(3,4,5), "right");
-    });
-    QUnit.test("triangle type (3,3,10)", function(assert){
-        assert.equal(triangleType(3,3,10), "obtuse");
-    });
+QUnit.test( "1", function(assert) {
+  assert.deepEqual( triangleExists(1,2,3), true );
+});
+QUnit.test( "2", function(assert) {
+  assert.deepEqual( triangleExists(2,2,2), true );
+});
+QUnit.test( "3", function(assert) {
+  assert.deepEqual( triangleExists(100,50,50), false );
+});
+QUnit.test( "4", function(assert) {
+  assert.deepEqual( triangleExists(0,99,3), true );
+});
+QUnit.test( "5", function(assert) {
+  assert.deepEqual( triangleExists(-1,2,3), true );
+});
 }
 
 function triangleExists(side1,side2,side3){

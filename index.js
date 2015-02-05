@@ -5,19 +5,19 @@ $(document).ready(function(){
 
 function startTests(){
 QUnit.test( "1", function(assert) {
-  assert.ok( triangleExists(1,2,3), true );
+  assert.deepEqual( triangleExists(1,2,3), true );
 });
 QUnit.test( "2", function(assert) {
-  assert.ok( triangleExists(2,2,2), true );
+  assert.deepEqual( triangleExists(2,2,2), true );
 });
 QUnit.test( "3", function(assert) {
-  assert.ok( triangleExists(100,50,50), false );
+  assert.deepEqual( triangleExists(100,50,50), false );
 });
 QUnit.test( "4", function(assert) {
-  assert.ok( triangleExists(0,99,3), true );
+  assert.deepEqual( triangleExists(0,99,3), true );
 });
 QUnit.test( "5", function(assert) {
-  assert.ok( triangleExists(-1,2,3), true );
+  assert.deepEqual( triangleExists(-1,2,3), true );
 });
 }
 

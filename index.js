@@ -17,7 +17,7 @@ function triangleType(side1,side2,side3){
     else if(side1*side1+side2*side2>side3*side3){
         return "acute";
     }
-    else if(side1*side1+side2*side2<side3*side3{
+    else if(side1*side1+side2*side2<side3*side3){
         return "obtuse";
     }
 }

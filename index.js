@@ -19,7 +19,7 @@ QUnit.test("acute equalateral", function(assert){
     assert.equal(triangleType(3,3,3), "acute");
 });
 QUnit.test("right triangle 3,4,5", function(assert){
-    assert.equal(triangleType(3,4 5), "right");
+    assert.equal(triangleType(3,4, 5), "right");
 });
 
 

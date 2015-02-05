@@ -1,7 +1,7 @@
 
 
 QUnit.test( "exist 1,2,3", function(assert) {
-  assert.deepEqual( triangleExists(1,2,3), true );
+  assert.deepEqual( triangleExists(1,2,3), false );
 });
 QUnit.test( "exist 2,2,2", function(assert) {
   assert.deepEqual( triangleExists(2,2,2), true );
@@ -10,7 +10,7 @@ QUnit.test( "exist 100,50,50", function(assert) {
   assert.deepEqual( triangleExists(100,50,50), false );
 });
 QUnit.test( "exist 0, 99, 3", function(assert) {
-  assert.deepEqual( triangleExists(0,99,3), true );
+  assert.deepEqual( triangleExists(0,99,3), false );
 });
 QUnit.test( "exist -1,2,3", function(assert) {
   assert.deepEqual( triangleExists(-1,2,3), false );

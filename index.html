@@ -1,35 +1,19 @@
 
-<!--Program: Gabe's Quiz
-    Author:	Gabe Stengel
-    Date:	Friday, September 26, 2014
-    Notes:	When I uploaded to Heroku the score system bugged out a lot so I removed it for now, will fix/correct 
+<!--copy pasted from qunit website 
 -->
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Gabe Stengel's Quiz</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css"> 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type = "text/javascript" src="makework.js"></script>
-     
-      
-  </head>
-  <body>
-    <header>
-        <h1 id="title"> Welcome dis Quiz!</h1>
-    </header>
-      <br id = "afterThis">
-      <p1 id="qslot">Hi! What's your name? <input type="text" id="test" value="Name"></p1>
-      <form id = frm>
-      </form>
-    <footer>
-        <button id="forName" onclick = enterName()>Continue</button>
-    </footer>
-      <br>
-      
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.17.1.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="//code.jquery.com/qunit/qunit-1.17.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="index.js"></script>
+</body>
 </html>

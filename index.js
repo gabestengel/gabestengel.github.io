@@ -1,5 +1,19 @@
 
-
+QUnit.test( "hello test", function(assert) {
+  assert.ok( triangleExists(1,2,3), true );
+});
+QUnit.test( "hello test", function(assert) {
+  assert.ok( triangleExists(2,2,2), true );
+});
+QUnit.test( "hello test", function(assert) {
+  assert.ok( triangleExists(100,50,50), false );
+});
+QUnit.test( "hello test", function(assert) {
+  assert.ok( triangleExists(0,99,3), true );
+});
+QUnit.test( "hello test", function(assert) {
+  assert.ok( triangleExists(-1,2,3), true );
+});
 
 function triangleExists(side1,side2,side3){
     var sides= [side1,side2,side3];
@@ -21,21 +35,7 @@ function triangleType(side1,side2,side3){
         return "obtuse";
     }
 }
-QUnit.test( "hello test", function(assert) {
-  assert.ok( triangleExists(1,2,3), true );
-});
-QUnit.test( "hello test", function(assert) {
-  assert.ok( triangleExists(2,2,2), true );
-});
-QUnit.test( "hello test", function(assert) {
-  assert.ok( triangleExists(100,50,50), false );
-});
-QUnit.test( "hello test", function(assert) {
-  assert.ok( triangleExists(0,99,3), true );
-});
-QUnit.test( "hello test", function(assert) {
-  assert.ok( triangleExists(-1,2,3), true );
-});
+
             
 //-triangleExists(a,b,c), which returns true if a triangle with side lengths a,b,c exists
 //-triangleType(a,b,c), which returns “right”, “obtuse”, or “acute” 
